@@ -7,7 +7,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
+    @Styles.Render("~/vendor/bootstrap/css/bootstrap.min.css")
+    @Styles.Render("~/vendor/metisMenu/metisMenu.min.css")
+    @Styles.Render("~/Content/sb-admin-2.css")
+    @Styles.Render("~/vendor/font-awesome/css/font-awesome.min.css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
@@ -160,8 +163,10 @@
             <!-- /.container-fluid -->
         </div>
     </div>
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
+        @Scripts.Render("~/vendor/jquery/jquery.min.js")
+        @Scripts.Render("~/vendor/bootstrap/js/bootstrap.min.js")
+        @Scripts.Render("~/vendor/metisMenu/metisMenu.min.js")
+        @Scripts.Render("~/Scripts/sb-admin-2.js")
         @RenderSection("scripts", required: false)
 </body>
 </html>

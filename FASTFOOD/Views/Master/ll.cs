@@ -7,5 +7,6 @@ namespace FASTFOOD.Views.Master
 {
     public class ll
     {
+        String t;
     }
 }

@@ -144,6 +144,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\PromotionsController.cs" />
     <Compile Include="Controllers\StaffController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -185,7 +186,11 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Staff\Index.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Menu\Index.cshtml" />
+=======
+    <Content Include="Views\Promotions\Index.cshtml" />
+>>>>>>> 9ac6e67039cfb505cc839278c3a4ced9504fa944
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

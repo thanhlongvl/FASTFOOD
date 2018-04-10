@@ -11,6 +11,8 @@
     @Styles.Render("~/vendor/metisMenu/metisMenu.min.css")
     @Styles.Render("~/Content/sb-admin-2.css")
     @Styles.Render("~/vendor/font-awesome/css/font-awesome.min.css")
+    @Styles.Render("~/vendor/datatables-plugins/dataTables.bootstrap.css")
+    @Styles.Render("~/vendor/datatables-responsive/dataTables.responsive.css")
 </head>
 <body>
     <div id="wrapper">
@@ -23,7 +25,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">SB Admin v2.0</a>
+                <a class="navbar-brand" href="#">FRIEDCHICKEN</a>
             </div>
             <!-- /.navbar-header -->
             <ul class="nav navbar-top-links navbar-right">
@@ -99,19 +101,7 @@
                             <a href="#"><i class="fa fa-gift"></i> Khuyến mại</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-archive"></i> Kho<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="#">Nhập kho</a>
-                                </li>
-                                <li>
-                                    <a href="#">Xuất kho</a>
-                                </li>
-                                <li>
-                                    <a href="#">Tồn kho</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
+                            <a href="#"><i class="fa fa-archive"></i> Kho</a>
                         </li>
                        
                         <li>
@@ -157,5 +147,15 @@
         @Scripts.Render("~/vendor/bootstrap/js/bootstrap.min.js")
         @Scripts.Render("~/vendor/metisMenu/metisMenu.min.js")
         @Scripts.Render("~/Scripts/sb-admin-2.js")
+        @Scripts.Render("~/vendor/datatables/js/jquery.dataTables.min.js")
+        @Scripts.Render("~/vendor/datatables-plugins/dataTables.bootstrap.min.js")
+        @Scripts.Render("~/vendor/datatables-responsive/dataTables.responsive.js")
+    <script>
+        $(document).ready(function () {
+            $('#dataTables-example').DataTable({
+                responsive: true
+            });
+        });
+    </script>
 </body>
 </html>

@@ -98,11 +98,11 @@
                         <li>
                             <a href="#"><i class="fa fa-gift"></i> Khuyến mại</a>
                         </li>
-                        <li class="#">
-                            <a href="#"><i class="fa fa-home"></i> Kho<span class="fa arrow"></span></a>
+                        <li>
+                            <a href="#"><i class="fa fa-archive"></i> Kho<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a class="#" href="">Nhập kho</a>
+                                    <a href="#">Nhập kho</a>
                                 </li>
                                 <li>
                                     <a href="#">Xuất kho</a>
@@ -113,14 +113,15 @@
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
+                       
                         <li>
                             <a href="#"><i class="fa fa-edit fa-fw"></i>Thực đơn</a>
                         </li>
-                        <li class="#">
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i>Khác<span class="fa arrow"></span></a>
+                        <li>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Khác<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a class="#" href="">Nhân viên</a>
+                                    <a href="#">Nhân viên</a>
                                 </li>
                                 <li>
                                     <a href="#">Khách hàng</a>
@@ -131,6 +132,7 @@
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
+                        
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
@@ -142,7 +144,6 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        
                         @RenderBody()
                     </div>
                     <!-- /.col-lg-12 -->
@@ -156,6 +157,5 @@
         @Scripts.Render("~/vendor/bootstrap/js/bootstrap.min.js")
         @Scripts.Render("~/vendor/metisMenu/metisMenu.min.js")
         @Scripts.Render("~/Scripts/sb-admin-2.js")
-        @RenderSection("scripts", required: false)
 </body>
 </html>

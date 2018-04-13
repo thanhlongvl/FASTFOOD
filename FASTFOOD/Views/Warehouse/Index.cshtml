@@ -1,6 +1,411 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Kho";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-                           
+
+<h2>Kho</h2>
+<div class="">
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Nhập kho</a></li>
+        <li><a data-toggle="tab" href="#menu1">Xuất kho</a></li>
+        <li><a data-toggle="tab" href="#menu2">Tồn kho</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+            <div class="well well-sm">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Them">
+                    <p class="glyphicon glyphicon-plus"></p> Thêm
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="Them" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h3 class="modal-title"><b>Thêm chương trình khuyến mại - Tặng món</b></h3>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="name">Tên chương trình <label style="color:red"> (*)</label></label>
+                                        <input type="text" class="form-control" id="usr">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="descreption">Mô tả:</label>
+                                        <input type="text" class="form-control" id="pwd">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="descreption">Áp dụng cho:</label>
+                                        <select class="form-control">
+                                            <option selected>Toàn bộ khách hàng</option>
+                                            <option>Khách hàng có sinh nhật trong tháng</option>
+                                            <option>Khách hàng có sinh nhật trong ngày</option>
+                                            <option>Hạng thẻ</option>
+                                            <option>Nhóm khách hàng</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="descreption">Thời gian áp dụng:</label>
+                                        <div class="form-inline">
+                                            <label>Từ</label>
+                                            <label>
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-calendar">
+                                                        </i>
+                                                    </div>
+                                                    <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text" />
+                                                </div>
+                                            </label>
+                                            <label>Đến</label>
+                                            <label>
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-calendar">
+                                                        </i>
+                                                    </div>
+                                                    <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text" />
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><p class="glyphicon glyphicon-floppy-disk"></p> Lưu</button>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal"><p class="glyphicon glyphicon-remove-sign"></p> Hủy bỏ</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-inline">
+                <select class="form-control" style="width:140px">
+                    <option>Hôm nay</option>
+                    <option>Hôm qua</option>
+                    <option selected>Tuần này</option>
+                    <option>Tuần trước</option>
+                    <option>Tháng này</option>
+                    <option>Tháng trước</option>
+                    <option>Quý này</option>
+                    <option>Quý trước</option>
+                </select>
+                <label>Từ ngày</label>
+                <label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-calendar">
+                            </i>
+                        </div>
+                        <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text" />
+                    </div>
+                </label>
+                <label>Đến ngày</label>
+                <label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-calendar">
+                            </i>
+                        </div>
+                        <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text" />
+                    </div>
+                </label>
+                <button type="button" class="btn btn-success"><p class="glyphicon glyphicon-search"></p> Lấy dữ liệu</button>
+            </div><hr />
+            <div class="table-responsive">
+                <table class="table table-striped" id="dataTables-example">
+                    <thead>
+                        <tr>
+                            <th style="text-align:center">#</th>
+                            <th style="text-align:center">Ngày</th>
+                            <th style="text-align:center">Số phiếu nhập</th>
+                            <th style="text-align:center">Tổng tiền</th>
+                            <th style="text-align:center">Diễn giải</th>
+                            <th style="text-align:center">Đối tượng xuất</th>
+                            <th style="text-align:center">Hoạt động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align:center">1</td>
+                            <td style="text-align:center">20/11/2018</td>
+                            <td style="text-align:center">NK0001</td>
+                            <td style="text-align:center">140000</td>
+                            <td style="text-align:center">Nhập gì giờ</td>
+                            <td style="text-align:center">Long</td>
+                            <td style="text-align:center">
+                                <button type="button" class="btn btn-primary" title="Detail">
+                                    <i class="glyphicon glyphicon-th-list"></i>
+                                </button>
+                                <button type="button" class="btn btn-primary" title="Edit">
+                                    <i class="glyphicon glyphicon-edit"></i>
+                                </button>
+                                <button type="button" class="btn btn-primary" title="Delete">
+                                    <i class="glyphicon glyphicon-remove"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!--xuat kho-->
+        <div id="menu1" class="tab-pane fade">
+            <div class="well well-sm">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Them">
+                    <p class="glyphicon glyphicon-plus"></p> Thêm
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="Them" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h3 class="modal-title"><b>Thêm chương trình khuyến mại - Tặng món</b></h3>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="name">Tên chương trình <label style="color:red"> (*)</label></label>
+                                        <input type="text" class="form-control" id="usr">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="descreption">Mô tả:</label>
+                                        <input type="text" class="form-control" id="pwd">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="descreption">Áp dụng cho:</label>
+                                        <select class="form-control">
+                                            <option selected>Toàn bộ khách hàng</option>
+                                            <option>Khách hàng có sinh nhật trong tháng</option>
+                                            <option>Khách hàng có sinh nhật trong ngày</option>
+                                            <option>Hạng thẻ</option>
+                                            <option>Nhóm khách hàng</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="descreption">Thời gian áp dụng:</label>
+                                        <div class="form-inline">
+                                            <label>Từ</label>
+                                            <label>
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-calendar">
+                                                        </i>
+                                                    </div>
+                                                    <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text" />
+                                                </div>
+                                            </label>
+                                            <label>Đến</label>
+                                            <label>
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-calendar">
+                                                        </i>
+                                                    </div>
+                                                    <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text" />
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><p class="glyphicon glyphicon-floppy-disk"></p> Lưu</button>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal"><p class="glyphicon glyphicon-remove-sign"></p> Hủy bỏ</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-inline">
+                <select class="form-control" style="width:140px">
+                    <option>Hôm nay</option>
+                    <option>Hôm qua</option>
+                    <option selected>Tuần này</option>
+                    <option>Tuần trước</option>
+                    <option>Tháng này</option>
+                    <option>Tháng trước</option>
+                    <option>Quý này</option>
+                    <option>Quý trước</option>
+                </select>
+                <label>Từ ngày</label>
+                <label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-calendar">
+                            </i>
+                        </div>
+                        <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text" />
+                    </div>
+                </label>
+                <label>Đến ngày</label>
+                <label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-calendar">
+                            </i>
+                        </div>
+                        <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text" />
+                    </div>
+                </label>
+                <button type="button" class="btn btn-success"><p class="glyphicon glyphicon-search"></p> Lấy dữ liệu</button>
+            </div><hr />
+            <div class="table-responsive">
+                <table class="table table-striped" id="dataTables-xuatkho">
+                    <thead>
+                        <tr>
+                            <th style="text-align:center">#</th>
+                            <th style="text-align:center">Ngày</th>
+                            <th style="text-align:center">Số phiếu xuất</th>
+                            <th style="text-align:center">Tổng tiền</th>
+                            <th style="text-align:center">Diễn giải</th>
+                            <th style="text-align:center">Đối tượng nhận</th>
+                            <th style="text-align:center">Hoạt động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align:center">1</td>
+                            <td style="text-align:center">20/11/2018</td>
+                            <td style="text-align:center">NK0001</td>
+                            <td style="text-align:center">140000</td>
+                            <td style="text-align:center">Nhập gì giờ</td>
+                            <td style="text-align:center">Long</td>
+                            <td style="text-align:center">
+                                <button type="button" class="btn btn-primary" title="Detail">
+                                    <i class="glyphicon glyphicon-th-list"></i>
+                                </button>
+                                <button type="button" class="btn btn-primary" title="Edit">
+                                    <i class="glyphicon glyphicon-edit"></i>
+                                </button>
+                                <button type="button" class="btn btn-primary" title="Delete">
+                                    <i class="glyphicon glyphicon-remove"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!--Ton kho-->
+        <div id="menu2" class="tab-pane fade">
+            <br />
+            <div class="form-inline">
+                <select class="form-control" style="width:140px">
+                    <option>Hôm nay</option>
+                    <option>Hôm qua</option>
+                    <option selected>Tuần này</option>
+                    <option>Tuần trước</option>
+                    <option>Tháng này</option>
+                    <option>Tháng trước</option>
+                    <option>Quý này</option>
+                    <option>Quý trước</option>
+                </select>
+                <label>Từ ngày</label>
+                <label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-calendar">
+                            </i>
+                        </div>
+                        <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text" />
+                    </div>
+                </label>
+                <label>Đến ngày</label>
+                <label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-calendar">
+                            </i>
+                        </div>
+                        <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text" />
+                    </div>
+                </label>
+            </div>
+            
+            <div class="form-inline">
+                <label>Kho</label>
+                <select class="form-control" style="width:140px">
+                    <option selected>--Tất cả--</option>
+                    <option></option>
+                </select>
+
+                <label>Nhóm NVL</label>
+                <select class="form-control" style="width:140px">
+                    <option selected>--Tất cả--</option>
+                    <option></option>
+                </select>
+
+                <label>ĐVT</label>
+                <select class="form-control" style="width:140px">
+                    <option selected>--Tất cả--</option>
+                    <option></option>
+                </select>
+                <button type="button" class="btn btn-success"><p class="glyphicon glyphicon-search"></p> Lấy dữ liệu</button>
+            </div>
+            <hr />
+            <div class="table-responsive">
+                <table class="table table-striped" id="dataTables-tonkho">
+                    <thead>
+                        <tr>
+                            <th style="text-align:center">#</th>
+                            <th style="text-align:center">Ngày</th>
+                            <th style="text-align:center">Số phiếu xuất</th>
+                            <th style="text-align:center">Tổng tiền</th>
+                            <th style="text-align:center">Diễn giải</th>
+                            <th style="text-align:center">Đối tượng nhận</th>
+                            <th style="text-align:center">Hoạt động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align:center">1</td>
+                            <td style="text-align:center">20/11/2018</td>
+                            <td style="text-align:center">NK0001</td>
+                            <td style="text-align:center">140000</td>
+                            <td style="text-align:center">Nhập gì giờ</td>
+                            <td style="text-align:center">Long</td>
+                            <td style="text-align:center">
+                                <button type="button" class="btn btn-primary" title="Detail">
+                                    <i class="glyphicon glyphicon-th-list"></i>
+                                </button>
+                                <button type="button" class="btn btn-primary" title="Edit">
+                                    <i class="glyphicon glyphicon-edit"></i>
+                                </button>
+                                <button type="button" class="btn btn-primary" title="Delete">
+                                    <i class="glyphicon glyphicon-remove"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+<script>
+    $(document).ready(function () {
+        var date_input = $('input[name="date"]'); //our date input has the name "date"
+        var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+        date_input.datepicker({
+            format: 'mm/dd/yyyy',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        })
+    })
+</script>

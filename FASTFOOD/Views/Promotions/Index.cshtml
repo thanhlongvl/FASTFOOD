@@ -29,7 +29,7 @@
                             <div class="modal-body">
                                 <form>
                                     <div class="form-group">
-                                        <label for="name">Tên chương trình:</label>
+                                        <label for="name">Tên chương trình <label style="color:red"> (*)</label></label>
                                         <input type="text" class="form-control" id="usr">
                                     </div>
                                     <div class="form-group">
@@ -74,10 +74,11 @@
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><p class="glyphicon glyphicon-floppy-disk"></p> Lưu</button>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal"><p class="glyphicon glyphicon-remove-sign"></p> Hủy bỏ</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -112,6 +113,7 @@
                         <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text" />
                     </div>
                 </label>
+                <button type="button" class="btn btn-success"><p class="glyphicon glyphicon-search"></p> Lấy dữ liệu</button>
             </div><hr />
             <div class="table-responsive">
                 <table class="table table-striped" id="dataTables-example">
@@ -159,8 +161,8 @@
                     </tbody>
                 </table>
             </div>
-            
         </div>
+
         <div id="menu1" class="tab-pane fade">
             <div class="well well-sm">
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Them2">
@@ -174,57 +176,28 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h3 class="modal-title"><b>Thêm chương trình khuyến mại - Tặng món</b></h3>
+                                <h3 class="modal-title"><b>Thêm Voucher</b></h3>
                             </div>
                             <div class="modal-body">
                                 <form>
                                     <div class="form-group">
-                                        <label for="name">Tên chương trình:</label>
+                                        <label for="name">Nhà phát hành <label style="color:red"> (*)</label></label>
                                         <input type="text" class="form-control" id="usr">
                                     </div>
                                     <div class="form-group">
-                                        <label for="descreption">Mô tả:</label>
+                                        <label for="descreption">Voucher <label style="color:red"> (*)</label></label>
                                         <input type="text" class="form-control" id="pwd">
                                     </div>
                                     <div class="form-group">
-                                        <label for="descreption">Áp dụng cho:</label>
-                                        <select class="form-control">
-                                            <option selected>Toàn bộ khách hàng</option>
-                                            <option>Khách hàng có sinh nhật trong tháng</option>
-                                            <option>Khách hàng có sinh nhật trong ngày</option>
-                                            <option>Hạng thẻ</option>
-                                            <option>Nhóm khách hàng</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="descreption">Thời gian áp dụng:</label>
-                                        <div class="form-inline">
-                                            <label>Từ</label>
-                                            <label>
-                                                <div class="input-group">
-                                                    <div class="input-group-addon">
-                                                        <i class="fa fa-calendar">
-                                                        </i>
-                                                    </div>
-                                                    <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text" />
-                                                </div>
-                                            </label>
-                                            <label>Đến</label>
-                                            <label>
-                                                <div class="input-group">
-                                                    <div class="input-group-addon">
-                                                        <i class="fa fa-calendar">
-                                                        </i>
-                                                    </div>
-                                                    <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text" />
-                                                </div>
-                                            </label>
-                                        </div>
+                                        <label>Mô tả <label style="color:red"> (*)</label></label>
+                                        <textarea class="form-control" rows="3"></textarea>
                                     </div>
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><p class="glyphicon glyphicon-floppy-disk"></p> Lưu</button>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal"><p class="glyphicon glyphicon-remove-sign"></p> Hủy bỏ</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
                             </div>
                         </div>
                     </div>
@@ -234,39 +207,26 @@
                 </button>
             </div>
             <div class="table-responsive">
-                <table class="table table-striped">
+                <table class="table table-striped" id="dataTable-voucher">
                     <thead>
                         <tr>
                             <th style="text-align:center">#</th>
-                            <th style="text-align:center">Chương trình khuyến mại</th>
-                            <th style="text-align:center">Hình thức khuyến mại</th>
-                            <th style="text-align:center">Thời gian khuyến mại</th>
+                            <th style="text-align:center">Nhà phát hành</th>
+                            <th style="text-align:center">Voucher</th>
                             <th style="text-align:center">Mô tả</th>
+                            <th style="text-align:center">Tổng số lượng thẻ</th>
+                            <th style="text-align:center">Tổng giá trị</th>
                             <th style="text-align:center">Hoạt động</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td style="text-align:center">1</td>
+                            <td style="text-align:center">Thanh Long</td>
                             <td style="text-align:center">Tri ân khách hàng</td>
-                            <td style="text-align:center">Giảm 50%</td>
-                            <td style="text-align:center">01/04/2018 - 30/04/2018</td>
-                            <td style="text-align:center">Áp dụng cho khách hàng</td>
-                            <td style="text-align:center">
-                                <button type="button" class="btn btn-primary" title="View">
-                                    <i class="glyphicon glyphicon-edit"></i>
-                                </button>
-                                <button type="button" class="btn btn-primary" title="Delete">
-                                    <i class="glyphicon glyphicon-remove"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="text-align:center">1</td>
-                            <td style="text-align:center">Tri ân khách hàng</td>
-                            <td style="text-align:center">Giảm 50%</td>
-                            <td style="text-align:center">01/04/2018 - 30/04/2018</td>
-                            <td style="text-align:center">Áp dụng cho khách hàng</td>
+                            <td style="text-align:center">Cho khách hàng</td>
+                            <td style="text-align:center">15</td>
+                            <td style="text-align:center">1500000</td>
                             <td style="text-align:center">
                                 <button type="button" class="btn btn-primary" title="View">
                                     <i class="glyphicon glyphicon-edit"></i>
@@ -278,17 +238,6 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
-            <div style="text-align:right">
-                <ul class="pagination">
-                    <li><a href="#">Previous</a></li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">Next</a></li>
-                </ul>
             </div>
         </div>
     </div>
@@ -309,14 +258,3 @@
         })
     })
 </script>
-
-
-
-
-
-
-
-
-
-
-

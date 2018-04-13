@@ -1,10 +1,10 @@
 ﻿
 @{
-    ViewBag.Title = "Nhan vien";
+    ViewBag.Title = "Nhà Cung Cấp";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Nhân Viên</h2>
+<h2>Nhà Cung cẤP</h2>
 
 <div class="">
     <div class="row">
@@ -12,50 +12,43 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Them">
-                        <p class="glyphicon glyphicon-plus"></p> Thêm nhân viên
-                    </button>   
-                                
-                 </div>
-            
+                        <p class="glyphicon glyphicon-plus"></p> Thêm nhà cung cấp
+                    </button>
+
+                </div>
+
             </div>
-           
+
             <div class="table-responsive">
                 <table class="table table-striped" id="dataTables-example">
                     <thead>
                         <tr>
-                            
-                            <th style="text-align:center">Tên đăng nhập</th>
-                            <th style="text-align:center">Tên nhân viên</th>
+
+                            <th style="text-align:center">Mã nhà cung cấp</th>
+                            <th style="text-align:center">Tên nhà cung cấp</th>
                             <th style="text-align:center">SĐT</th>
-                            <th style="text-align:center">Giơí tính</th>
-                            <th style="text-align:center">Chức vụ</th>
+                            <th style="text-align:center">Địa Chỉ</th>
+                            <th style="text-align:center">Hình Thức</th>
                             <th style="text-align:center">Hoạt động</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            
-                            <td style="text-align:center">ngocphuho</td>
+
+                            <td style="text-align:center">NCC01</td>
                             <td style="text-align:center">Hồ Ngọc Phú</td>
                             <td style="text-align:center">0123</td>
+                            <td style="text-align:center">123 Trường Chinh</td>
                             <td style="text-align:center">
                                 <div class="form-group">
-                                    
+
                                     <select class="form-control">
-                                        <option>Nam</option>
-                                        <option>Nữ</option>                                        
+                                        <option>Cá nhân</option>
+                                        <option>Tổ chức</option>
                                     </select>
                                 </div>
                             </td>
-                            <td style="text-align:center">
-                                <div class="form-group">
-                                 
-                                    <select class="form-control">
-                                        <option>Quản lý</option>
-                                        <option>Nhân viên</option>                                        
-                                    </select>
-                                </div>
-                            </td>
+                           
                             <td style="text-align:center">
                                 <button type="button" class="btn btn-primary" title="Detail">
                                     <i class="glyphicon glyphicon-th-list"></i>
@@ -66,33 +59,26 @@
                                 <button type="button" class="btn btn-primary" title="Delete">
                                     <i class="glyphicon glyphicon-remove"></i>
                                 </button>
-                                
+
                             </td>
-                        </tr>      
-                        
+                        </tr>
+
                         <tr>
 
-                            <td style="text-align:center">dangthanhlong</td>
-                            <td style="text-align:center">Đặng Thanh Long</td>
+                            <td style="text-align:center">NCC02</td>
+                            <td style="text-align:center">CTy Gà rán</td>
                             <td style="text-align:center">0123</td>
+                            <td style="text-align:center">123 Cộng Hoà</td>
                             <td style="text-align:center">
                                 <div class="form-group">
 
                                     <select class="form-control">
-                                        <option>Nam</option>
-                                        <option>Nữ</option>
+                                        <option>Cá nhân</option>
+                                        <option>Tổ chức</option>
                                     </select>
                                 </div>
                             </td>
-                            <td style="text-align:center">
-                                <div class="form-group">
 
-                                    <select class="form-control">
-                                        <option>Quản lý</option>
-                                        <option>Nhân viên</option>
-                                    </select>
-                                </div>
-                            </td>
                             <td style="text-align:center">
                                 <button type="button" class="btn btn-primary" title="Detail">
                                     <i class="glyphicon glyphicon-th-list"></i>
@@ -105,30 +91,23 @@
                                 </button>
 
                             </td>
-                        </tr>   
+                        </tr>
                         <tr>
 
-                            <td style="text-align:center">ngvothanhlong</td>
-                            <td style="text-align:center">Nguyễn Võ Thành Long</td>
+                            <td style="text-align:center">NCC03</td>
+                            <td style="text-align:center">CTy nước ngọt</td>
                             <td style="text-align:center">0123</td>
+                            <td style="text-align:center">456 Trường Chinh</td>
                             <td style="text-align:center">
                                 <div class="form-group">
 
                                     <select class="form-control">
-                                        <option>Nam</option>
-                                        <option>Nữ</option>
+                                        <option>Cá nhân</option>
+                                        <option>Tổ chức</option>
                                     </select>
                                 </div>
                             </td>
-                            <td style="text-align:center">
-                                <div class="form-group">
 
-                                    <select class="form-control">
-                                        <option>Quản lý</option>
-                                        <option>Nhân viên</option>
-                                    </select>
-                                </div>
-                            </td>
                             <td style="text-align:center">
                                 <button type="button" class="btn btn-primary" title="Detail">
                                     <i class="glyphicon glyphicon-th-list"></i>
@@ -141,30 +120,23 @@
                                 </button>
 
                             </td>
-                        </tr>   
+                        </tr>
                         <tr>
 
-                            <td style="text-align:center">ngtaithanhlong</td>
-                            <td style="text-align:center">Nguyên Tài Thành Long</td>
+                            <td style="text-align:center">NCC04</td>
+                            <td style="text-align:center">MIB</td>
                             <td style="text-align:center">0123</td>
+                            <td style="text-align:center">123 Lê Văn Sỹ</td>
                             <td style="text-align:center">
                                 <div class="form-group">
 
                                     <select class="form-control">
-                                        <option>Nam</option>
-                                        <option>Nữ</option>
+                                        <option>Cá nhân</option>
+                                        <option>Tổ chức</option>
                                     </select>
                                 </div>
                             </td>
-                            <td style="text-align:center">
-                                <div class="form-group">
 
-                                    <select class="form-control">
-                                        <option>Quản lý</option>
-                                        <option>Nhân viên</option>
-                                    </select>
-                                </div>
-                            </td>
                             <td style="text-align:center">
                                 <button type="button" class="btn btn-primary" title="Detail">
                                     <i class="glyphicon glyphicon-th-list"></i>
@@ -177,7 +149,7 @@
                                 </button>
 
                             </td>
-                        </tr>           
+                        </tr>
                     </tbody>
                 </table>
             </div>

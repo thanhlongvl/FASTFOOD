@@ -11,6 +11,8 @@
     @Styles.Render("~/vendor/metisMenu/metisMenu.min.css")
     @Styles.Render("~/Content/sb-admin-2.css")
     @Styles.Render("~/Content/bootstrap-datetimepicker.css")
+    @Styles.Render("~/Content/bootstrap-datetimepicker.min.css")
+    @Styles.Render("~/Content/bootstrap-datetimepicker-standalone.css")
     @Styles.Render("~/vendor/font-awesome/css/font-awesome.min.css")
     @Styles.Render("~/vendor/datatables-plugins/dataTables.bootstrap.css")
     @Styles.Render("~/vendor/datatables-responsive/dataTables.responsive.css")
@@ -149,16 +151,20 @@
         @Scripts.Render("~/vendor/metisMenu/metisMenu.min.js")
         @Scripts.Render("~/Scripts/sb-admin-2.js")
         @Scripts.Render("~/Scripts/bootstrap-datetimepicker.js")
+        @Scripts.Render("~/Scripts/bootstrap-datetimepicker.min.js")
         @Scripts.Render("~/vendor/datatables/js/jquery.dataTables.min.js")
         @Scripts.Render("~/vendor/datatables-plugins/dataTables.bootstrap.min.js")
         @Scripts.Render("~/vendor/datatables-responsive/dataTables.responsive.js")
+    <!-- Include Date Range Picker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+
     <script>
         $(document).ready(function () {
             $('#dataTables-example').DataTable({
                 responsive: true
             });
         });
-
     </script>
 </body>
 </html>

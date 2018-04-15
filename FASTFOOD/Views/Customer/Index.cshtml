@@ -14,7 +14,54 @@
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Them">
                         <p class="glyphicon glyphicon-plus"></p> Thêm khách hàng
                     </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="Them" role="dialog">
+                        <div class="modal-dialog">
 
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h3 class="modal-title"><b>Thêm khách hàng</b></h3>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="name">Mã khách hàng(*):</label>
+                                            <input type="text" class="form-control" id="usr" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="descreption">Tên khách hàng(*):</label>
+                                            <input type="text" class="form-control" id="pwd">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="descreption">Giơí tính:</label>
+                                            <select class="form-control">
+                                                <option selected>Nam</option>
+                                                <option>Nữ</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="descreption">Email(*):</label>
+                                            <input type="text" class="form-control" id="pwd">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="descreption">Địa chỉ:</label>
+                                            <input type="text" class="form-control" id="pwd">
+                                        </div>
+                                        
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal"><p class="glyphicon glyphicon-floppy-disk"></p> Lưu</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal"><p class="glyphicon glyphicon-remove-sign"></p> Hủy bỏ</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -35,7 +82,7 @@
                     <tbody>
                         <tr>
 
-                            <td style="text-align:center">ngocphuho</td>
+                            <td style="text-align:center">KH01</td>
                             <td style="text-align:center">Hồ Ngọc Phú</td>
                             <td style="text-align:center">0123</td>
                             <td style="text-align:center">
@@ -64,7 +111,7 @@
 
                         <tr>
 
-                            <td style="text-align:center">dangthanhlong</td>
+                            <td style="text-align:center">KH02</td>
                             <td style="text-align:center">Đặng Thanh Long</td>
                             <td style="text-align:center">0123</td>
                             <td style="text-align:center">
@@ -92,7 +139,7 @@
                         </tr>
                         <tr>
 
-                            <td style="text-align:center">ngvothanhlong</td>
+                            <td style="text-align:center">KH03</td>
                             <td style="text-align:center">Nguyễn Võ Thành Long</td>
                             <td style="text-align:center">0123</td>
                             <td style="text-align:center">
@@ -120,7 +167,7 @@
                         </tr>
                         <tr>
 
-                            <td style="text-align:center">ngtaithanhlong</td>
+                            <td style="text-align:center">KH04</td>
                             <td style="text-align:center">Nguyên Tài Thành Long</td>
                             <td style="text-align:center">0123</td>
                             <td style="text-align:center">
